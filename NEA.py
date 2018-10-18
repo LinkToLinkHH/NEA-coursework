@@ -2,16 +2,38 @@ import random
 Lives = 2
 password = "Lumagar"
 
-while Lives != "0":
-    print("Welcome to the music quiz!")
-    player1 = input("What is your name?")
-    player1pw = input("What is the password?")
-    if player1pw == password:
-        print("You can play the music quiz!!")
+print("Welcome to the music quiz!")
+player = input("What is your name?")
+playerpw = input("What is the password?")
+if playerpw == password:
+    print("You can play the music quiz!!")
 
-    else:
-        print("You are not authorised to play this quiz!!")
+else:
+    print("You are not authorised to play this quiz!!")
 
-    Songs = open("Songstxt")
+
+def remove():
+    test = items[i].replace("A","-")
+
+    test0 = test.replace("E","-")
+
+    test1 = test0.replace("I","-")
+        
+    test2 = test1.replace("O","-")
+
+    test3 = test2.replace("U","-")
+    print(test3)
+def choose_songs():
+    Songs = open("Songs.txt""r")
     Songs = Songs.read()
-    Artists = open("Artist.txt")
+    Artists = open("Artists.txt""r")
+    items = Songs.split(',')
+    i = random.randint(0,2)
+    remove()
+    Artists = Artists.read()
+    items = Artists.split(',')
+    remove()
+
+    print("Let's start!!")
+    choose_song()
+    
