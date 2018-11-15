@@ -17,7 +17,6 @@ playerpw = input("What is the password?")
 if playerpw == password:
     print("You can play the music quiz!!")
 
-
     #if the players lives get to "0" the players "name" and "points" is
     #put into the file as a leaderboard
     if Lives == 0:
@@ -70,7 +69,7 @@ if playerpw == password:
         #replaces "A,E,I,O,U" from both the artists file
         #and the song file with "-" 
         def remove():
-            test = items.replace("A","-")
+            test = Songs.replace("A","-")
 
             test0 = test.replace("E","-")
     
@@ -81,11 +80,11 @@ if playerpw == password:
             test3 = test2.replace("U","-")
     
 
-        print("Let's do this!!")
-        #runs the code and chooses a song
-        choose_songs()
-        print(choose_songs)
+    print("Let's do this!!")
+    #runs the code and chooses a song
+    choose_songs()
 
-    #if it does not equal to password then the player cannot play
+#if it does not equal to password then the player cannot play
 else:
-    print("You are not authorised to play this quiz!!") 
+    print("You are not authorised to play this quiz!!")
+    
